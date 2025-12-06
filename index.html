@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>НПП КВАЛИТЕТ - Моторные и редукторные масла</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Open Sans', sans-serif; }
+        body { line-height: 1.6; color: #333; }
+        a { text-decoration: none; }
+        header { background: #003366; color: #fff; padding: 20px 0; position: sticky; top: 0; z-index: 1000; }
+        header .container { display: flex; justify-content: space-between; align-items: center; width: 90%; margin: auto; flex-wrap: wrap; }
+        header nav { display: flex; flex-wrap: wrap; gap: 10px; }
+        header a { color: #fff; margin-left: 15px; }
+        nav a:hover { text-decoration: underline; }
+        .hero { background: url('https://via.placeholder.com/1600x600') center/cover no-repeat; height: 600px; display: flex; align-items: center; justify-content: center; color: #fff; text-align: center; flex-direction: column; padding: 0 20px; }
+        .hero h1 { font-family: 'Montserrat', sans-serif; font-size: 48px; margin-bottom: 20px; }
+        .hero p { font-size: 20px; margin-bottom: 20px; }
+        .hero .btn { background: #ff6600; color: #fff; padding: 15px 30px; font-weight: bold; border-radius: 5px; }
+        section { padding: 60px 0; width: 90%; margin: auto; }
+        h2 { font-family: 'Montserrat', sans-serif; font-size: 32px; margin-bottom: 30px; text-align: center; color: #003366; }
+        .advantages, .products, .cases { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+        .card { background: #f5f5f5; padding: 20px; border-radius: 10px; text-align: center; flex: 1 1 250px; max-width: 300px; margin-bottom: 20px; }
+        .card img { max-width: 100px; margin-bottom: 15px; }
+        .card h3 { font-size: 20px; margin-bottom: 10px; color: #003366; }
+        .card p { font-size: 16px; }
+        footer { background: #003366; color: #fff; padding: 30px 0; text-align: center; }
+        footer a { color: #fff; margin: 0 10px; }
+        .btn-contact { background: #ff6600; color: #fff; padding: 10px 20px; font-weight: bold; border-radius: 5px; display: inline-block; margin-top: 10px; }
+        form { display: flex; flex-direction: column; gap: 15px; max-width: 500px; margin: auto; }
+        input, textarea { padding: 10px; border-radius: 5px; border: 1px solid #ccc; width: 100%; }
+        button { background: #003366; color: #fff; border: none; padding: 15px; border-radius: 5px; font-weight: bold; cursor: pointer; }
+        button:hover { background: #ff6600; }
+
+        /* Адаптивность */
+        @media (max-width: 1200px) {
+            .hero h1 { font-size: 40px; }
+            .hero p { font-size: 18px; }
+        }
+        @media (max-width: 992px) {
+            header .container { flex-direction: column; gap: 10px; }
+            .hero h1 { font-size: 36px; }
+            .hero p { font-size: 16px; }
+        }
+        @media (max-width: 768px) {
+            .advantages, .products, .cases { flex-direction: column; align-items: center; }
+            .card { max-width: 90%; }
+            .hero { height: 500px; }
+            .hero h1 { font-size: 28px; }
+            .hero p { font-size: 14px; }
+        }
+        @media (max-width: 480px) {
+            .hero { height: 400px; }
+            .hero h1 { font-size: 22px; }
+            .hero p { font-size: 12px; }
+            .btn { padding: 10px 20px; font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo"><h1>КВАЛИТЕТ</h1></div>
+        <nav>
+            <a href="#advantages">Преимущества</a>
+            <a href="#products">Продукция</a>
+            <a href="#cases">Кейсы</a>
+            <a href="#about">О компании</a>
+11:27
+<a href="#contacts">Контакты</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Моторные и редукторные масла для тяжёлых условий</h1>
+    <p>Надёжность, эффективность, качество — проверено на практике</p>
+    <a href="#contacts" class="btn">Связаться с нами</a>
+</section>
+
+<section id="advantages">
+    <h2>Наши преимущества</h2>
+    <div class="advantages">
+        <div class="card">
+            <img src="https://via.placeholder.com/100" alt="Присадки">
+            <h3>Собственные присадки</h3>
+            <p>Уникальная формула для любых условий эксплуатации.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/100" alt="Производство">
+            <h3>Полный цикл производства</h3>
+            <p>От лаборатории до упаковки готовой продукции.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/100" alt="Качество">
+            <h3>Высокие показатели качества</h3>
+            <p>Долговечность и максимальная защита техники.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/100" alt="Сертификаты">
+            <h3>Сертификаты и испытания</h3>
+            <p>Соответствие ГОСТ, ТУ и внутренним стандартам компании.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/100" alt="Опыт">
+            <h3>Опыт работы с СТО и промышленностью</h3>
+            <p>Надёжные решения для бизнеса по всей России.</p>
+        </div>
+    </div>
+</section>
+
+<section id="products">
+    <h2>Продукция</h2>
+    <div class="products">
+        <div class="card">
+            <img src="https://via.placeholder.com/100" alt="Моторное масло">
+            <h3>Моторное масло 10W40</h3>
+            <p>Для легковых и грузовых автомобилей, максимальная защита двигателя.</p>
+            <a href="#contacts" class="btn-contact">Узнать цену</a>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/100" alt="Редукторное масло">
+            <h3>Редукторное масло 80W90</h3>
+            <p>Для грузовой техники и спецоборудования, высокое щелочное число.</p>
+            <a href="#contacts" class="btn-contact">Узнать цену</a>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/100" alt="Присадки">
+            <h3>Присадки и добавки</h3>
+            <p>Улучшение эксплуатационных характеристик масел и топлива.</p>
+            <a href="#contacts" class="btn-contact">Узнать цену</a>
+        </div>
+    </div>
+</section>
+
+<section id="cases">
+    <h2>Кейсы и отзывы клиентов</h2>
+    <div class="cases">
+        <div class="card">
+            <img src="https://via.placeholder.com/100" alt="Кейс">
+            <h3>Тягач X</h3>
+            <p>Моторное масло КВАЛИТЕТ 10W40 — ресурс двигателя +15%</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/100" alt="Кейс">
+            <h3>СТО Краснодар</h3>
+            <p>Экономия на замене масла 20% благодаря КВАЛИТЕТ</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/100" alt="Кейс">
+            <h3>Промпредприятие</h3>
+            <p>Стабильная работа оборудования с редукторными маслами КВАЛИТЕТ</p>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <h2>О компании</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+        НПП КВАЛИТЕТ — российская компания полного цикла, с собственными лабораториями и производством присадок. Более 20 лет опыта на рынке. Мы обеспечиваем высокое качество и надёжность наших продуктов для СТО, промышленных предприятий и транспортных компаний.
+    </p>
+</section>
+
+<section id="contacts">
+    <h2>Контакты</h2>
+    <form>
+        <input type="text" placeholder="Ваше имя" required>
+        <input type="email" placeholder="Ваш e-mail" required>
+        <input type="tel" placeholder="Телефон" required>
+11:27
+<textarea placeholder="Сообщение" rows="5" required></textarea>
+        <button type="submit">Отправить</button>
+    </form>
+    <p style="text-align:center; margin-top:20px;">Телефон: +7 (XXX) XXX-XX-XX | Email: info@npp-qualitet.ru</p>
+</section>
+
+<footer>
+    <p>© 2025 НПП КВАЛИТЕТ. Все права защищены</p>
+    <p>
+        <a href="#advantages">Преимущества</a> |
+        <a href="#products">Продукция</a> |
+        <a href="#cases">Кейсы</a> |
+        <a href="#about">О компании</a> |
+        <a href="#contacts">Контакты</a>
+    </p>
+</footer>
+
+</body>
+</html>
