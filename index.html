@@ -17,8 +17,9 @@
     </a>
 
     <nav class="nav">
-      <a href="/index.html">Главная</a>
+      <a href="/">Главная</a>
       <a href="/products/">Продукция</a>
+      <a href="/qualitet/">Квалитет</a>
       <a href="/company/about/">О предприятии</a>
       <a href="/company/lab/">Лаборатория</a>
     </nav>
@@ -31,113 +32,91 @@
   </div>
 
   <div class="mobile" data-mobile>
-    <a href="/">Главная</a>
+    <a href="/intex.html">Главная</a>
     <a href="/products/">Продукция</a>
     <a href="/products/motor/">Моторные масла</a>
     <a href="/products/transmission/">Трансмиссионные</a>
     <a href="/products/antifreeze/">Антифриз</a>
-       <a href="/company/about/">О предприятии</a>
+    <a href="/qualitet/">Квалитет</a>
+    <a href="/company/about/">О предприятии</a>
     <a href="/company/lab/">Лаборатория</a>
     <a href="tel:+79994133777">Позвонить</a>
     <a href="mailto:89994133777@mail.ru?subject=Запрос%20цены%20/%20ассортимент%20QUALITET">Написать на почту</a>
   </div>
 </header>
 
-<section class="hero">
-  <div class="container hero__grid">
-    <div>
-      <h1>Официальный дистрибьютор НПП «Квалитет»</h1>
-      <p>Смазочные материалы для коммерческого транспорта, автопарков и СТО. Подбор по технике и условиям эксплуатации, поставка в Краснодарском крае.</p>
+<!-- БОЛЬШОЙ СЛАЙДЕР СРАЗУ -->
+<section class="top">
+  <div class="container">
+    <div class="slider slider--hero" data-slider>
+      <div class="slider__track" data-track>
+        <div class="slider__slide">
+          <img src="/images/slide-1.jpg" alt="QUALITET — технологии" />
+        </div>
+        <div class="slider__slide">
+          <img src="/images/slide-2.jpg" alt="QUALITET — лаборатория" />
+        </div>
+        <div class="slider__slide">
+          <img src="/images/slide-3.jpg" alt="QUALITET — продукция" />
+        </div>
+      </div>
 
-      <div class="hero__actions">
+      <button class="slider__btn slider__btn--prev" data-prev aria-label="Предыдущий слайд">‹</button>
+      <button class="slider__btn slider__btn--next" data-next aria-label="Следующий слайд">›</button>
+      <div class="slider__dots" data-dots aria-label="Навигация по слайдам"></div>
+    </div>
+
+    <!-- Под слайдером: коротко и по делу -->
+    <div class="top__under">
+      <div class="top__text">
+        <h1>Официальный дистрибьютор НПП «Квалитет»</h1>
+        <p>Смазочные материалы для коммерческого транспорта, автопарков и СТО. Подбор по технике и условиям эксплуатации, поставка в Краснодарском крае.</p>
+      </div>
+
+      <div class="top__actions">
         <a class="btn" href="/products/">Каталог продукции</a>
         <a class="btn btn--ghost" href="mailto:89994133777@mail.ru?subject=Подбор%20масла%20QUALITET&body=Здравствуйте!%0AТехника:%0AДвигатель/КПП:%0AУсловия:%0AФасовка:%0AОбъём:%0AТелефон:%0A">Подбор / запрос</a>
       </div>
-
-      <div class="hero__badge">
-        <span class="badge">B2B поставки</span>
-        <span class="badge">Подбор по допускам</span>
-        <span class="badge">Коммерческий транспорт</span>
-      </div>
-    </div>
-
-    <!-- Слайдер вместо "Что на сайте" -->
-    <div class="hero__visual hero__visual--slider">
-      <div class="slider" data-slider>
-        <div class="slider__track" data-track>
-          <div class="slider__slide">
-            <img src="/images/slide-1.jpg" alt="QUALITET — технологии" />
-          </div>
-          <div class="slider__slide">
-            <img src="/images/slide-2.jpg" alt="QUALITET — лаборатория" />
-          </div>
-          <div class="slider__slide">
-            <img src="/images/slide-3.jpg" alt="QUALITET — продукция" />
-          </div>
-        </div>
-
-        <button class="slider__btn slider__btn--prev" data-prev aria-label="Предыдущий слайд">‹</button>
-        <button class="slider__btn slider__btn--next" data-next aria-label="Следующий слайд">›</button>
-
-        <div class="slider__dots" data-dots aria-label="Навигация по слайдам"></div>
-      </div>
-
-      <div class="hero__note">
-        <h3>Что на сайте</h3>
-        <ul>
-          <li>Моторные масла: PREMIER / PREMIER PLUS / PERFECT</li>
-          <li>Трансмиссионные масла: GL-4, GL-5, Hypoid Gear</li>
-          <li>Антифриз: G12+</li>
-        </ul>
-        <p class="smallline">Нужна цена или подбор? Позвоните или напишите на почту.</p>
-      </div>
     </div>
   </div>
 </section>
 
-<section class="section">
+<!-- Ниже уже кнопки/плитки -->
+<section class="section section--tight">
   <div class="container">
-    <div class="section__title">
-      <h2>Основные направления</h2>
-      <p>Быстрый переход в ключевые разделы</p>
+    <div class="section__title section__title--center">
+      <h2>Продукция</h2>
     </div>
 
-    <div class="cards">
-      <a class="card" href="/products/">
-        <img src="/images/card-1.jpg" alt="Продукция">
-        <div class="card__body">
-          <h3>Продукция</h3>
-          <p>Каталог масел и антифриза QUALITET</p>
+    <div class="tiles">
+      <a class="tile" href="/products/motor/">
+        <div class="tile__media">
+          <img src="/images/motor.jpg" alt="Моторные масла">
         </div>
+        <div class="tile__cap">Моторные масла</div>
       </a>
 
-      <a class="card" href="/company/lab/">
-        <img src="/images/card-2.jpg" alt="Контроль качества">
-        <div class="card__body">
-          <h3>Контроль качества</h3>
-          <p>Лаборатория и подбор решений</p>
+      <a class="tile" href="/products/transmission/">
+        <div class="tile__media">
+          <img src="/images/transmission.jpg" alt="Трансмиссионные масла">
         </div>
+        <div class="tile__cap">Трансмиссионные масла</div>
       </a>
 
-      <a class="card" href="/products/motor/">
-        <img src="/images/card-3.jpg" alt="Моторные масла">
-        <div class="card__body">
-          <h3>Моторные масла</h3>
-          <p>Для дизельных двигателей в тяжелых режимах</p>
+      <a class="tile" href="/products/antifreeze/">
+        <div class="tile__media">
+          <img src="/images/antifreeze.jpg" alt="Антифриз G12+">
         </div>
+        <div class="tile__cap">Антифриз G12+</div>
       </a>
     </div>
-  </div>
-</section>
 
-<section class="section">
-  <div class="container">
-    <div class="box">
+    <div class="box" style="margin-top:20px">
       <h3>Это не полный ассортимент</h3>
       <p>
         На сайте представлен не весь ассортимент продукции QUALITET.
-        Для получения полного перечня масел, фасовок и технических характеристик
-        напишите нам — отправим полный ассортимент и подберём решение под вашу технику.
+        Напишите нам — отправим полный перечень масел, фасовок и характеристики,
+        а также подберём решение под вашу технику.
       </p>
       <div style="margin-top:14px">
         <a href="mailto:89994133777@mail.ru?subject=Запрос%20полного%20ассортимента%20QUALITET" class="btn">Запросить полный ассортимент</a>
@@ -164,4 +143,3 @@
 <script src="/js/main.js"></script>
 </body>
 </html>
-
