@@ -516,5 +516,16 @@ textarea{min-height:110px;resize:vertical}
   .top__text h1{ font-size: 24px; }
 }
 .mobile.is-open{ display:block; }
+}
+.slider__track{
+  display:flex;
+  transition: transform .35s ease;
+  will-change: transform;
+}
+
+.slider__slide{
+  min-width:100%;
+}
+
 
 
