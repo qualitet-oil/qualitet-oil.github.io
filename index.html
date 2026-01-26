@@ -11,13 +11,13 @@
 
 <header class="header">
   <div class="container header__inner">
-    <a class="brand" href="/">
+    <a class="brand" href="/index.html">
       <img class="logo" src="/images/logo.png" alt="Квалитет" />
-      <span><span class="tagline">Официальный дистрибьютор НПП «Квалитет»</span></span>
+      <span class="tagline">Официальный дистрибьютор НПП «Квалитет»</span>
     </a>
 
-    <nav class="nav">
-      <a href="/">Главная</a>
+    <nav class="nav" aria-label="Навигация">
+      <a href="/index.html" class="active">Главная</a>
       <a href="/products/">Продукция</a>
       <a href="/qualitet/">Квалитет</a>
       <a href="/company/about/">О предприятии</a>
@@ -27,12 +27,12 @@
     <div class="header__right">
       <a class="phone" href="tel:+79994133777">+7 999 413-37-77</a>
       <a class="btn btn--small" href="mailto:89994133777@mail.ru?subject=Запрос%20цены%20/%20ассортимент%20QUALITET">Запросить цену</a>
-      <button class="burger" data-burger aria-expanded="false" aria-label="Меню">☰</button>
+      <button class="burger" data-burger aria-expanded="false" aria-label="Открыть меню">☰</button>
     </div>
   </div>
 
   <div class="mobile" data-mobile>
-    <a href="/intex.html">Главная</a>
+    <a href="/index.html">Главная</a>
     <a href="/products/">Продукция</a>
     <a href="/products/motor/">Моторные масла</a>
     <a href="/products/transmission/">Трансмиссионные</a>
@@ -45,7 +45,7 @@
   </div>
 </header>
 
-<!-- БОЛЬШОЙ СЛАЙДЕР СРАЗУ -->
+<!-- Большой слайдер сразу -->
 <section class="top">
   <div class="container">
     <div class="slider slider--hero" data-slider>
@@ -63,10 +63,11 @@
 
       <button class="slider__btn slider__btn--prev" data-prev aria-label="Предыдущий слайд">‹</button>
       <button class="slider__btn slider__btn--next" data-next aria-label="Следующий слайд">›</button>
+
       <div class="slider__dots" data-dots aria-label="Навигация по слайдам"></div>
     </div>
 
-    <!-- Под слайдером: коротко и по делу -->
+    <!-- Под слайдером -->
     <div class="top__under">
       <div class="top__text">
         <h1>Официальный дистрибьютор НПП «Квалитет»</h1>
@@ -81,7 +82,7 @@
   </div>
 </section>
 
-<!-- Ниже уже кнопки/плитки -->
+<!-- Ниже уже кнопки -->
 <section class="section section--tight">
   <div class="container">
     <div class="section__title section__title--center">
@@ -115,10 +116,10 @@
       <h3>Это не полный ассортимент</h3>
       <p>
         На сайте представлен не весь ассортимент продукции QUALITET.
-        Напишите нам — отправим полный перечень масел, фасовок и характеристики,
+        Напишите нам — отправим полный перечень масел, фасовок и технические характеристики,
         а также подберём решение под вашу технику.
       </p>
-      <div style="margin-top:14px">
+      <div class="box__actions">
         <a href="mailto:89994133777@mail.ru?subject=Запрос%20полного%20ассортимента%20QUALITET" class="btn">Запросить полный ассортимент</a>
         <a href="tel:+79994133777" class="btn btn--ghost">Позвонить</a>
       </div>
