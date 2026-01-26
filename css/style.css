@@ -515,4 +515,6 @@ textarea{min-height:110px;resize:vertical}
   .tiles{ grid-template-columns: 1fr; }
   .top__text h1{ font-size: 24px; }
 }
+.mobile.is-open{ display:block; }
+
 
