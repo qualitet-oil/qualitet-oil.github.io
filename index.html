@@ -63,14 +63,36 @@
       </div>
     </div>
 
-    <div class="hero__visual">
-      <h3>Что на сайте</h3>
-      <ul>
-        <li>Моторные масла: PREMIER / PREMIER PLUS / PERFECT</li>
-        <li>Трансмиссионные масла: GL-4, GL-5, Hypoid Gear</li>
-        <li>Антифриз: G12+</li>
-      </ul>
-      <p class="smallline">Нужна цена или подбор? Позвоните или напишите на почту.</p>
+    <!-- Слайдер вместо "Что на сайте" -->
+    <div class="hero__visual hero__visual--slider">
+      <div class="slider" data-slider>
+        <div class="slider__track" data-track>
+          <div class="slider__slide">
+            <img src="/images/slide-1.jpg" alt="QUALITET — технологии" />
+          </div>
+          <div class="slider__slide">
+            <img src="/images/slide-2.jpg" alt="QUALITET — лаборатория" />
+          </div>
+          <div class="slider__slide">
+            <img src="/images/slide-3.jpg" alt="QUALITET — продукция" />
+          </div>
+        </div>
+
+        <button class="slider__btn slider__btn--prev" data-prev aria-label="Предыдущий слайд">‹</button>
+        <button class="slider__btn slider__btn--next" data-next aria-label="Следующий слайд">›</button>
+
+        <div class="slider__dots" data-dots aria-label="Навигация по слайдам"></div>
+      </div>
+
+      <div class="hero__note">
+        <h3>Что на сайте</h3>
+        <ul>
+          <li>Моторные масла: PREMIER / PREMIER PLUS / PERFECT</li>
+          <li>Трансмиссионные масла: GL-4, GL-5, Hypoid Gear</li>
+          <li>Антифриз: G12+</li>
+        </ul>
+        <p class="smallline">Нужна цена или подбор? Позвоните или напишите на почту.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -84,7 +106,7 @@
 
     <div class="cards">
       <a class="card" href="/products/">
-        <img src="/images/card-1.jpg" alt="">
+        <img src="/images/card-1.jpg" alt="Продукция">
         <div class="card__body">
           <h3>Продукция</h3>
           <p>Каталог масел и антифриза QUALITET</p>
@@ -92,7 +114,7 @@
       </a>
 
       <a class="card" href="/company/lab/">
-        <img src="/images/card-3.jpg" alt="">
+        <img src="/images/card-2.jpg" alt="Контроль качества">
         <div class="card__body">
           <h3>Контроль качества</h3>
           <p>Лаборатория и подбор решений</p>
@@ -100,7 +122,7 @@
       </a>
 
       <a class="card" href="/products/motor/">
-        <img src="/images/card-2.jpg" alt="">
+        <img src="/images/card-3.jpg" alt="Моторные масла">
         <div class="card__body">
           <h3>Моторные масла</h3>
           <p>Для дизельных двигателей в тяжелых режимах</p>
@@ -144,7 +166,3 @@
 <script src="/js/main.js"></script>
 </body>
 </html>
-
-
-
-
