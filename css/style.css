@@ -287,6 +287,44 @@ img{max-width:100%;display:block}
   gap:12px;
   flex-wrap:wrap;
 }
+/* ===== Страницы продуктов ===== */
+.product{
+  padding: 48px 0;
+  border-top: 1px solid var(--line);
+}
+
+.product:first-of-type{
+  border-top: none;
+}
+
+.product__grid{
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 40px;
+  align-items: center;
+}
+
+.product__image{
+  display: grid;
+  place-items: center;
+}
+
+.product__image img{
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+}
+
+/* мобильная версия */
+@media (max-width: 980px){
+  .product__grid{
+    grid-template-columns: 1fr;
+  }
+  .product__image img{
+    max-width: 300px;
+  }
+}
+
 
 
 
