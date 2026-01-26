@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Контакты — Квалитет</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="/"><img class="logo" src="/images/logo.png" alt="Квалитет"><span><span class="tagline">Официальный дистрибьютор НПП «Квалитет»</span></span></a>
+    <nav class="nav">
+      <a href="/">Главная</a><a href="/products/">Продукция</a><a href="/qualitet/">Квалитет</a><a href="/company/about/">О предприятии</a><a href="/contacts/">Контакты</a>
+    </nav>
+    <div class="header__right">
+      <a class="phone" href="tel:+79994133777">+7 999 413-37-77</a>
+      <a class="btn btn--small" href="#form">Запросить цену</a>
+      <button class="burger" data-burger aria-expanded="false">☰</button>
+    </div>
+  </div>
+  <div class="mobile" data-mobile>
+    <a href="/">Главная</a><a href="/products/">Продукция</a>
+    <a href="/products/motor/">Моторные масла</a>
+    <a href="/products/transmission/">Трансмиссионные</a>
+    <a href="/products/antifreeze/">Антифриз</a>
+    <a href="/contacts/">Контакты</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Контакты</h1>
+    <p>Свяжитесь с нами для запроса цены, полного ассортимента и подбора продукции под вашу технику.</p>
+  </div>
+</section>
+
+<section class="section contact">
+  <div class="container contact__grid">
+    <div class="box">
+      <h3>Контакты</h3>
+      <p><strong>Телефон:</strong> <a href="tel:+79994133777">+7 999 413-37-77</a></p>
+      <p><strong>Email:</strong> <a href="mailto:89994133777@mail.ru">89994133777@mail.ru</a></p>
+      <p><strong>Регион:</strong> Краснодарский край</p>
+      <p class="help">Можно написать, позвонить или оставить заявку через форму.</p>
+    </div>
+
+    <div class="box" id="form">
+      <h3>Запрос цены / полный ассортимент</h3>
+      <form action="mailto:89994133777@mail.ru" method="post" enctype="text/plain">
+        <div class="field">
+          <label>Имя</label>
+          <input name="name" placeholder="Как к вам обращаться" required>
+        </div>
+        <div class="field">
+          <label>Телефон</label>
+          <input name="phone" placeholder="+7..." required>
+        </div>
+        <div class="field">
+          <label>Запрос</label>
+          <textarea name="message" placeholder="Что нужно? Масло/антифриз, вязкость, фасовка, техника, объём"></textarea>
+        </div>
+        <div class="check">
+          <input type="checkbox" required>
+          <span>Согласен на обработку персональных данных</span>
+        </div>
+        <div style="margin-top:14px">
+          <button class="btn" type="submit">Отправить</button>
+        </div>
+        <div class="help">Если почтовый клиент не настроен, лучше подключить Formspree/Getform.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div><strong>Квалитет</strong><br><small>Официальный дистрибьютор НПП «Квалитет»</small></div>
+    <div><small>Телефон: <a href="tel:+79994133777">+7 999 413-37-77</a></small><br><small>Email: <a href="mailto:89994133777@mail.ru">89994133777@mail.ru</a></small></div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
