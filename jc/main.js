@@ -1,23 +1,22 @@
-(function () {
-  // Burger menu
+document.addEventListener('DOMContentLoaded', () => {
+  // ===== Burger menu =====
   const burger = document.querySelector('[data-burger]');
   const mobile = document.querySelector('[data-mobile]');
   if (burger && mobile) {
     burger.addEventListener('click', () => {
-      const open = mobile.style.display === 'block';
-      mobile.style.display = open ? 'none' : 'block';
-      burger.setAttribute('aria-expanded', String(!open));
+      const open = mobile.classList.toggle('is-open');
+      burger.setAttribute('aria-expanded', String(open));
     });
   }
 
-  // Active link highlight
-  const path = window.location.pathname.replace(/\/$/, '') || '/';
+  // ===== Active link highlight =====
+  const path = (window.location.pathname || '/').replace(/\/$/, '') || '/';
   document.querySelectorAll('.nav a, .mobile a').forEach(a => {
     const href = (a.getAttribute('href') || '').replace(/\/$/, '') || '/';
     if (href === path) a.classList.add('active');
   });
 
-  // Slider
+  // ===== Slider =====
   const slider = document.querySelector('[data-slider]');
   if (!slider) return;
 
@@ -25,12 +24,17 @@
   const prevBtn = slider.querySelector('[data-prev]');
   const nextBtn = slider.querySelector('[data-next]');
   const dotsWrap = slider.querySelector('[data-dots]');
+
+  if (!track) return;
+
   const slides = Array.from(track.children);
+  if (slides.length <= 1) return;
 
   let index = 0;
   let timer = null;
 
   // Build dots
+  let dots = [];
   if (dotsWrap) {
     dotsWrap.innerHTML = '';
     slides.forEach((_, i) => {
@@ -40,9 +44,8 @@
       b.addEventListener('click', () => goTo(i));
       dotsWrap.appendChild(b);
     });
+    dots = Array.from(dotsWrap.children);
   }
-
-  const dots = dotsWrap ? Array.from(dotsWrap.children) : [];
 
   function update() {
     track.style.transform = `translateX(-${index * 100}%)`;
@@ -67,7 +70,7 @@
   }
   restart();
 
-  // Swipe (mobile)
+  // Swipe
   let startX = 0;
   let dx = 0;
 
@@ -85,7 +88,7 @@
     dx = 0;
   });
 
-  // Pause on hover (desktop)
+  // Pause on hover
   slider.addEventListener('mouseenter', () => timer && clearInterval(timer));
   slider.addEventListener('mouseleave', restart);
-})();
+});
