@@ -259,6 +259,35 @@ img{max-width:100%;display:block}
   .top__text h1{font-size:24px}
   .tiles{grid-template-columns:1fr}
 }
+.about-block{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:28px;
+  box-shadow:var(--shadow);
+  max-width:980px;
+  margin:0 auto;
+}
+
+.about-block h2{
+  color:var(--dark);
+  font-size:26px;
+  margin-bottom:14px;
+}
+
+.about-block p{
+  color:#3c5166;
+  margin-bottom:12px;
+  line-height:1.65;
+}
+
+.about-actions{
+  margin-top:18px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
 
 
 
