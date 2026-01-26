@@ -167,3 +167,22 @@ img{max-width:100%;display:block}
   .top__actions{width:100%}
   .top__actions .btn{width:100%}
 }
+/* ===== FIX: слайдер на мобилке без обрезки краёв ===== */
+@media (max-width: 600px){
+  .slider{
+    background:#fff; /* чтобы "поля" смотрелись нормально */
+  }
+
+  .slider__slide{
+    height: auto;
+    aspect-ratio: 1200 / 430; /* примерная пропорция твоих баннеров */
+  }
+
+  .slider__slide img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;      /* ключевое: не режет края */
+    object-position: center;
+  }
+}
+
