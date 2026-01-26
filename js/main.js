@@ -1,15 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // ===== Burger menu =====
+  // Burger menu
   const burger = document.querySelector('[data-burger]');
   const mobile = document.querySelector('[data-mobile]');
+
   if (burger && mobile) {
     burger.addEventListener('click', () => {
       const open = mobile.classList.toggle('is-open');
       burger.setAttribute('aria-expanded', String(open));
     });
+
+    // Close menu on link click
+    mobile.addEventListener('click', (e) => {
+      const a = e.target.closest('a');
+      if (!a) return;
+      mobile.classList.remove('is-open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
   }
 
-  // ===== Slider =====
+  // HERO slider
   const slider = document.querySelector('[data-slider]');
   if (!slider) return;
 
@@ -19,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const dotsWrap = slider.querySelector('[data-dots]');
   if (!track) return;
 
-  const slides = Array.from(track.children);
+  const slides = Array.from(track.children).filter(el => el.classList.contains('slider__slide'));
   if (slides.length <= 1) return;
 
   let index = 0;
@@ -30,11 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (dotsWrap) {
     dotsWrap.innerHTML = '';
     slides.forEach((_, i) => {
-      const b = document.createElement('button');
-      b.type = 'button';
-      b.className = 'slider__dot' + (i === 0 ? ' is-active' : '');
-      b.addEventListener('click', () => goTo(i));
-      dotsWrap.appendChild(b);
+      const d = document.createElement('button');
+      d.type = 'button';
+      d.className = 'slider__dot' + (i === 0 ? ' is-active' : '');
+      d.setAttribute('aria-label', `Слайд ${i + 1}`);
+      d.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(d);
     });
     dots = Array.from(dotsWrap.children);
   }
@@ -53,17 +63,15 @@ document.addEventListener('DOMContentLoaded', () => {
   function next() { goTo(index + 1); }
   function prev() { goTo(index - 1); }
 
-  if (nextBtn) nextBtn.addEventListener('click', next);
-  if (prevBtn) prevBtn.addEventListener('click', prev);
+  nextBtn && nextBtn.addEventListener('click', next);
+  prevBtn && prevBtn.addEventListener('click', prev);
 
   function restart() {
     if (timer) clearInterval(timer);
     timer = setInterval(next, 5000);
   }
-  restart();
-  update();
 
-  // Swipe
+  // Touch swipe
   let startX = 0;
   let dx = 0;
 
@@ -77,11 +85,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { passive: true });
 
   slider.addEventListener('touchend', () => {
-    if (Math.abs(dx) > 40) dx < 0 ? next() : prev();
+    if (Math.abs(dx) > 40) (dx < 0 ? next() : prev());
     dx = 0;
   });
 
   // Pause on hover (desktop)
   slider.addEventListener('mouseenter', () => timer && clearInterval(timer));
   slider.addEventListener('mouseleave', restart);
+
+  update();
+  restart();
 });
