@@ -255,8 +255,9 @@ img{max-width:100%;display:block}
   .nav{display:none}
   .burger{display:inline-flex;align-items:center;justify-content:center}
   .brand{min-width:auto}
-  .slider__slide{height:260px}
+  .slider__slide{height:200px}
   .top__text h1{font-size:24px}
   .tiles{grid-template-columns:1fr}
 }
+
 
