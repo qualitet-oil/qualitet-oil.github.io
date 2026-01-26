@@ -400,7 +400,80 @@ img{max-width:100%;display:block}
   .card img{
     height: 200px;
   }
+}/* ===== Mobile cleanup (до 600px) ===== */
+@media (max-width: 600px){
+
+  /* контейнер чуть уже */
+  .container{ padding: 0 12px; }
+
+  /* шапка: ниже, компактнее */
+  .header__inner{
+    height: 60px;
+    gap: 10px;
+  }
+
+  /* логотип меньше, подпись скрываем */
+  .logo{ height: 34px; }
+  .tagline{ display:none; }
+
+  /* телефон на мобилке лучше спрятать (он дублируется в меню) */
+  .phone{ display:none; }
+
+  /* кнопка "Запросить цену" компактнее */
+  .btn--small{
+    padding: 8px 10px;
+    font-size: 12px;
+    border-radius: 10px;
+  }
+
+  /* бургер чуть меньше */
+  .burger{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  /* Слайдер: нормальная высота и скругления */
+  .slider{ border-radius: 14px; }
+  .slider__slide{ height: 210px; }
+
+  /* стрелки не должны съедать половину экрана */
+  .slider__btn{
+    width: 36px;
+    height: 36px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .slider__btn--prev{ left: 10px; }
+  .slider__btn--next{ right: 10px; }
+
+  /* блок под слайдером: всё в колонку */
+  .top__under{
+    margin-top: 10px;
+    gap: 12px;
+  }
+  .top__text h1{
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+  .top__text p{
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* кнопки под слайдером: на всю ширину */
+  .top__actions{
+    width: 100%;
+  }
+  .top__actions .btn{
+    width: 100%;
+    justify-content: center;
+  }
 }
+@media (max-width: 600px){
+  .slider__dots{ bottom: 8px; }
+}
+
 
 
 
