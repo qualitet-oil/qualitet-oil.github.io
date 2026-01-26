@@ -9,13 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ===== Active link highlight =====
-  const path = (window.location.pathname || '/').replace(/\/$/, '') || '/';
-  document.querySelectorAll('.nav a, .mobile a').forEach(a => {
-    const href = (a.getAttribute('href') || '').replace(/\/$/, '') || '/';
-    if (href === path) a.classList.add('active');
-  });
-
   // ===== Slider =====
   const slider = document.querySelector('[data-slider]');
   if (!slider) return;
@@ -24,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const prevBtn = slider.querySelector('[data-prev]');
   const nextBtn = slider.querySelector('[data-next]');
   const dotsWrap = slider.querySelector('[data-dots]');
-
   if (!track) return;
 
   const slides = Array.from(track.children);
@@ -69,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     timer = setInterval(next, 5000);
   }
   restart();
+  update();
 
   // Swipe
   let startX = 0;
@@ -88,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     dx = 0;
   });
 
-  // Pause on hover
+  // Pause on hover (desktop)
   slider.addEventListener('mouseenter', () => timer && clearInterval(timer));
   slider.addEventListener('mouseleave', restart);
 });
